@@ -1,40 +1,78 @@
-header nav ul {
-    list-style-type: none; /* Elimina los puntos de los items */
+/* Asegura que el texto no se salga de la pantalla y mejora la visibilidad en dispositivos móviles */
+body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Asegura que los elementos no se desborden fuera del contenedor */
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    line-height: 1.6; /* Aumenta el espaciado entre líneas */
+    letter-spacing: 0.05em; /* Añade espaciado entre caracteres */
+    font-family: Arial, sans-serif; /* Establece Arial como la fuente */
+	text-align: justify; /* Justifica el texto */
+	margin-right: 20px; /* Añade un margen derecho*/
+	margin-left: 20px; /* Añade un margen izquierdo*/
+}
+
+
+/* Hace que las imágenes sean responsivas */
+img {
+    max-width: 100%; /* Permite que la imagen se escale según el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes al escalar */
+}
+
+/* Estilos para la navegación */
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 header nav ul li {
-    float: left; /* Coloca los elementos del menú en horizontal */
+    float: left;
 }
 
 header nav ul li a {
-    display: block; /* Hace que los enlaces ocupen todo el espacio del elemento li */
-    text-align: center; /* Centra el texto dentro de cada enlace */
-    padding: 14px 16px; /* Añade algo de espacio alrededor del texto para hacerlo más clickeable */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-/* Puedes añadir un poco de estilo al pasar el mouse */
 header nav ul li a:hover {
-    background-color: #ddd; /* Cambia el color de fondo al pasar el mouse */
+    background-color: #ddd;
 }
 
 .contenedor {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 20px; /* Espaciado entre secciones */
+    gap: 20px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-section {
-    /* Estilos para tus secciones si es necesario */
+
+@media screen and (max-width: 768px) {
+    header nav ul li {
+        float: none;
+        width: 100%;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+	body {
+	        font-size: 16px; /* Ajusta el tamaño de la fuente para dispositivos más pequeños */
+	    }
 }
 
-img {
-  width: 500px;
-  height: 500px;
+@media screen and (max-width: 480px) {
+    /* Ajustes adicionales para dispositivos muy pequeños */
+    header nav ul li a {
+        padding: 10px 12px; /* Reduce el padding en los enlaces para ahorrar espacio */
+    }
+
+	body {
+	        font-size: 14px; /* Ajusta el tamaño de la fuente para dispositivos muy pequeños */
+	    }
 }
