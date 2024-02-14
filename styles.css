@@ -6,7 +6,7 @@ body {
     line-height: 1.6; /* Aumenta el espaciado entre líneas */
     letter-spacing: 0.05em; /* Añade espaciado entre caracteres */
     font-family: Arial, sans-serif; /* Establece Arial como la fuente */
-	text-align: justify; /* Justifica el texto */
+	/*text-align: justify; /* Justifica el texto */
 	margin-right: 20px; /* Añade un margen derecho*/
 	margin-left: 20px; /* Añade un margen izquierdo*/
 }
